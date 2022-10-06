@@ -30,7 +30,7 @@ jobs:
         folder: release/wwwroot
         
     - name: Change base-tag in index.html from / to BlazorGitHubPagesDemo
-      run: sed -i 's/<base href="\/" \/>/<base href="\/BlazorGitHubPagesDemo\/" \/>/g' release/wwwroot/index.html
+      run: sed -i 's/<base href="\/" \/>/<base href="\/WebTaskByUni\/" \/>/g' release/wwwroot/index.html
       
     - name: Add .nojekyll file
       run: touch release/wwwroot/.nojekyll
