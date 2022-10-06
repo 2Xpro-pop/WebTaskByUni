@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Components\More.razor.css" />
+    <None Remove="Components\ReadOnlyCheckbox.razor.css" />
+    <None Remove="Pages\AboutUs.razor.css" />
+    <None Remove="Pages\Home.razor.css" />
+    <None Remove="Pages\News.razor.css" />
+    <None Remove="Pages\Port.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Components\More.razor.css" />
+    <Content Include="Components\ReadOnlyCheckbox.razor.css" />
+    <Content Include="Pages\AboutUs.razor.css" />
+    <Content Include="Pages\Home.razor.css" />
+    <Content Include="Pages\News.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.8" PrivateAssets="all" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,15 @@
+﻿<div class="w-75 p-3">
+    @Main
+</div>
+
+<div class="w-25 p-3">
+    @Aside
+</div>
+
+@code {
+    [Parameter]
+    public RenderFragment? Main { get; set; }
+
+    [Parameter]
+    public RenderFragment? Aside { get; set; }
+}

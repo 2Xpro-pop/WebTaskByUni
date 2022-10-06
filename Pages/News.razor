@@ -1,0 +1,129 @@
+﻿@page "/news"
+
+<DoubleDividedLayout>
+
+    <Main>
+        @foreach(var news in _news)
+        {
+            @NewsCard(news)
+        }
+    </Main>
+
+    <Aside>
+        <div>
+            <h3>Categories</h3>
+            @for (int i = 0; i < 5; i++)
+            {
+                <ReadOnlyCheckbox Text=@($"CheckBoxNews {i}") />
+            }
+        </div>
+        <h3>Our News</h3>
+
+        <div class="mb-5">
+            <div class="info">
+                <p class="newsp" style="color: #4fa493;"><img style="width: 75px; height: 75px; " class="leftimg" src="https://static.insales-cdn.com/images/products/1/2370/192842050/10-021_%D0%94%D0%BE%D0%BB%D1%8C%D0%BA%D0%B8_%D0%BB%D0%B5%D0%BC%D0%BE%D0%BD%D0%B0.jpg"> ipsum dolor sit amet</p>
+                <p class="newsp">@LoremIpsum.Substring(0, 25)</p>
+            </div>
+            <div class="date">
+                <p class="newsp">June 28, 2048</p>
+            </div>
+        </div>
+
+
+        <div class="mb-5">
+            <div class="info">
+                <p class="newsp" style="color: #4fa493;"><img style="width: 75px; height: 75px; " class="leftimg" src="https://crosti.ru/patterns/00/09/f5/d4e96ea97c/thumbnail.jpg"> ipsum dolor sit amet</p>
+                <p class="newsp">@LoremIpsum.Substring(0, 25)</p>
+            </div>
+            <div class="date">
+                <p class="newsp">June 24, 2048</p>
+            </div>
+        </div>
+
+
+        <More />
+
+        <div class="mb-5" />
+
+        <div class="testimonials">
+            <h3>Testimonials</h3>
+            <blockquote>@LoremIpsum.Substring(0, 105)</blockquote>
+            <p style="color: #4fa493; font-family: 'Roboto Condensed', sans-serif;">Steven Web-Designer</p>
+        </div>
+    </Aside>
+
+</DoubleDividedLayout>
+
+@code {
+
+    private NewsInfo[] _news = new NewsInfo[]
+    {
+        new NewsInfo("Simple post 1", LoremIpsum, ImageUrl1, new TagInfo[] 
+        {
+            new TagInfo("#", "Web Templates"),
+            new TagInfo("#", "CSS")
+        }),
+        new NewsInfo("Simple post 2", LoremIpsum, ImageUrl2, new TagInfo[]
+        {
+            new TagInfo("#", "Web Templates"),
+            new TagInfo("#", "CSS")
+        }),
+    };
+
+    private RenderFragment<NewsInfo> NewsCard => (newsInfo) =>  __builder =>
+    {
+        <div class="post">
+            <p>
+            Posted in
+                                    
+            @foreach(var tag in newsInfo.Tags)
+            {
+                <a href=@tag.Link> @tag.Name</a>
+                @if(newsInfo.Tags.Last() != tag)
+                {
+                    @(",")
+                }
+            }
+
+            | Date: June 28, 2048</p>
+            <h3>@((MarkupString)newsInfo.Header)</h3>
+            <div class="image-container">
+                <img class="w-100" src=@newsInfo.ImageUrl>
+            </div>
+            
+            <p style="margin: 0.3em;">@newsInfo.Description</p>
+
+            <div class="text-end cursor">
+                <More />
+            </div>
+        </div>
+    };
+
+    class NewsInfo 
+    {
+        public string Header { get; set; }
+        public string Description { get; set; }
+        public string ImageUrl { get; set; }
+        public IEnumerable<TagInfo> Tags { get; set; }
+
+        public NewsInfo(string header, string description, string imageUrl, IEnumerable<TagInfo> tags)
+        {
+            Header = header;
+            Description = description;
+            Tags = tags;
+            ImageUrl = imageUrl;
+        }
+    } 
+
+    class TagInfo
+    {
+        public string Link { get; set; }
+        public string Name { get; set; }
+
+        public TagInfo(string link, string name)
+        {
+            Link = link;
+            Name = name;
+        }
+    }
+}

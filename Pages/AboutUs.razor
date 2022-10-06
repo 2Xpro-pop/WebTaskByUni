@@ -1,0 +1,77 @@
+﻿@page "/about-us"
+
+<DoubleDividedLayout>
+
+    <Main>
+
+        <h2>Who We Are</h2>
+        <p style="text-align: justify;"><img src="https://design-homes.ru/images/galery/2509/kreslo_5f892c0aac711.jpg" class="leftimg" style="width: 200px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat cum est suscipit. Odit ab unde delectus aliquam itaque assumenda ipsam inventore tempore sint ratione? Aut deserunt delectus autem nam qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, dolorum ullam tempora dolorem assumenda aspernatur tenetur at nemo alias, neque magnam dolor inventore ad reprehenderit, illo perspiciatis! Ducimus, quod repudiandae.</p>
+
+
+        <div class="ourservices">
+            <h2>Our Services</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet voluptate numquam in sequi similique ad enim aspernatur sunt, inventore quia aut odit doloremque nihil. Perferendis sunt incidunt molestiae accusamus consequuntur.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo maxime sint nam ipsum iusto ratione culpa repudiandae, in dolorum quae explicabo, blanditiis saepe exercitationem laudantium beatae nemo! Libero, minus ea?
+            </p>
+        </div>
+
+        <div class="d-flex">
+            <div class="flex-grow-1 m-4">
+                @for (int i = 0; i < 5; i++)
+                {
+                    <ReadOnlyCheckbox Text=@($"CheckBox {i}") />
+                }
+            </div>
+            <div class="flex-grow-1 m-4">
+                @for (int i = 0; i < 5; i++)
+                {
+                    <ReadOnlyCheckbox Text=@($"CheckBoxes2 {i}") />
+                }
+            </div>
+
+        </div>
+
+        <More />
+
+    </Main>
+
+    <Aside>
+
+        <h3>Our News</h3>
+
+        <div class="mb-5">
+            <div class="info">
+                <p class="newsp" style="color: #4fa493;"><img style="width: 75px; height: 75px; " class="leftimg" src="https://static.insales-cdn.com/images/products/1/2370/192842050/10-021_%D0%94%D0%BE%D0%BB%D1%8C%D0%BA%D0%B8_%D0%BB%D0%B5%D0%BC%D0%BE%D0%BD%D0%B0.jpg"> ipsum dolor sit amet</p>
+                <p class="newsp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ducimus maxime magni cup</p>
+            </div>
+            <div class="date">
+                <p class="newsp">June 28, 2048</p>
+            </div>
+        </div>
+
+
+        <div class="mb-5">
+            <div class="info">
+                <p class="newsp" style="color: #4fa493;"><img style="width: 75px; height: 75px; " class="leftimg" src="https://crosti.ru/patterns/00/09/f5/d4e96ea97c/thumbnail.jpg"> ipsum dolor sit amet</p>
+                <p class="newsp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ducimus maxime magni cup</p>
+            </div>
+            <div class="date">
+                <p class="newsp">June 24, 2048</p>
+            </div>
+        </div>
+
+
+        <More />
+
+        <div class="mb-5"/>
+
+        <div class="testimonials">
+            <h3>Testimonials</h3>
+            <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium unde maxime saepe voluptatem, officiis deserunt consectetur minus natus tempore vel voluptate dolore, vitae eius nam exercitationem architecto? Tempore, quam voluptatum?</blockquote>
+            <p style="color: #4fa493; font-family: 'Roboto Condensed', sans-serif;">Steven Web-Designer</p>
+        </div>
+
+    </Aside>
+
+</DoubleDividedLayout>

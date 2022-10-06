@@ -1,0 +1,22 @@
+﻿.post {
+    margin-top: 20px;
+    border-top: 3px solid gray;
+    border-bottom: 1px solid gray;
+}
+
+.post > p:first-of-type{
+    font-size: 12px;
+}
+
+.post img{
+    border: none;
+}
+
+.post h3 {
+    border-bottom: 1px solid gray;
+}
+
+.image-container {
+    background-color: white;
+    padding: 10px;
+}

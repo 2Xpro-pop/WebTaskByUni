@@ -1,0 +1,131 @@
+﻿@page "/"
+@page "/home"
+@page "/index"
+
+<div class="row">
+    <div class="d-flex my-5">
+        <div class="top-text">
+            <h1>Welcome to Silver Team </h1>
+            <p>@LoremIpsum</p>
+            <button class="btn btn-success">Learn more</button>
+        </div>
+        <div class="img-top">
+            <img src="wing.png">
+        </div>
+    </div>
+
+    <div class="row green-cards my-2">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <div class="d-flex flex-row-reverse">
+                        <a href="#" class="btn btn-success">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card card1">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <div class="d-flex flex-row-reverse">
+                        <a href="#" class="btn btn-success">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card card1">
+                <div class="card-body">
+                    <h5 class="card-title">Special title treatment</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <div class="d-flex flex-row-reverse">
+                        <a href="#" class="btn btn-success">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex my-5">
+        <div class="w-100 mx-2">
+            <h2>Latest Updates</h2>
+            <div class="card mb-2">
+                <div class="row g-0">
+                    <div class="col-md-4 orange-latest1">
+                        <img style="width:100% ;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd5FSComUcdfAN2LGjDayobVc6AIliMpCTWQ&amp;usqp=CAU" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 style="color: #198754;" class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="row g-0">
+                    <div class="col-md-4 orange-latest1">
+                        <img src="https://e7.pngegg.com/pngimages/555/204/png-clipart-orange-juice-tea-fruit-orange-natural-foods-food.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 style="color: #198754;" class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text </p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-2">
+                <div class="row g-0">
+                    <div class="col-md-4 orange-latest1">
+                        <img style="width: 100%;" src="https://png.pngtree.com/element_our/png_detail/20180903/orange-png-png_75700.jpg" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 style="color: #198754;" class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text</p>
+                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex flex-row-reverse">
+                <button style="border: solid 1px; margin-top:5px;" class="btn btn-light">View All</button>
+            </div>
+        </div>
+        <div class="w-100 mx-2">
+            <h2>Who we are</h2>
+            <i style="color: #198754;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias quaerat laboriosam iure sint, quisquam omnis ipsa a vel molestiae fugiat sapiente esse ea, enim quas modi expedita, doloremque eligendi itaque!</i>
+            <p style="margin-top:10px;"><a style="color: #198754;"> ipsum, dolor</a> sit amet consectetur adipisicing elit. Velit illo natus quam, nam corporis quia<a style="color: #198754;"> ipsum corrupti </a>reprehenderit ea similique dolores porro, <a style="color: #198754;"> labore optio</a>. Numquam quos in voluptates delectus.</p>
+            <ul style="margin-top: 30px;" class="list-group list-group-flush">
+                @for(int i = 0; i < 4; i++)
+                {
+                    <li style="color: green;" class="list-group-item">
+                        <ReadOnlyCheckbox Text=@($"{i} checkbox")/>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="w-100 mx-2">
+            <img class="w-100" src="https://purepng.com/public/uploads/large/purepng.com-orangeorangefruitfoodtastydeliciousorangecolor-331522582483ulajt.png" alt="" srcset="">
+            <ul style="margin-top: 15px;" class="list-group list-group-flush">
+                @for (int i = 0; i < 5; i++)
+                {
+                    <li style="color: green;" class="list-group-item">
+                        <ReadOnlyCheckbox Text=@($"{i} checkbox") />
+                    </li>
+                }
+            </ul>
+            <div class="d-flex flex-row-reverse">
+                <button style="border: solid 1px; margin-top:24px;" class="btn btn-light">View All</button>
+            </div>
+        </div>
+    </div>
+
+</div>
